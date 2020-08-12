@@ -15,14 +15,18 @@
         </thead>
         <tbody>
           <% if (data) { %>
-            <% for(let i = 0; i < data.length; i++) { %>
+            <% data.forEach((item, i) => { %>
               <tr>
                 <th><%= i + 1 %></th>
-                <th><%= data[i].name %></th>
-                <th><%= data[i].address %></th>
-                <th><%= data[i].phone %></th>
+                <th><%= item.name %></th>
+                <th><%= item.address %></th>
+                <th><%= item.phone %></th>
+                <th>
+                  <a href="/delete/<%= item.id %>" class="btn btn-danger">Eliminar</a>
+                  <a href="/update/<%= item.id %>" class="btn btn-info">Actualizar</a>
+                </th>
               </tr>
-            <% } %>
+            <% }); %>
           <% } %>
         </tbody>
       </table>
