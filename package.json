@@ -4,7 +4,7 @@
   "description": "",
   "main": "/src/app.js",
   "scripts": {
-    "start": "mode src/app.js"
+    "start": "mode src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app.js"
   },
