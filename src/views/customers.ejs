@@ -1,0 +1,29 @@
+<%- include('partials/_header'); %>
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-7">
+
+    </div>
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-body">
+          <form class="" action="/add" method="post">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" name="address" placeholder="address" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" name="phone" placeholder="phone" class="form-control">
+            </div>
+            <button type="submit" name="button" class="btn btn-primary">SAVE CUSTOMER</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/_footer') %>
