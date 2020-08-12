@@ -14,6 +14,20 @@ controller.list = (req, res) => {
   })
 }
 
-controller.save = (req, res) => {}
+controller.save = (req, res) => {
+
+  const data = req.body;
+
+  req.getConnection( (err, conn) => {
+    conn.query('INSERT INTO customer set ?', [data], (err, customer) => {
+      console.log(customer);
+      res.redirect('/');
+    });
+  })
+}
+
+controller.delete = (req, res) => {
+  
+}
 
 module.exports = controller;

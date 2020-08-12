@@ -3,7 +3,29 @@
 <div class="container">
   <div class="row mt-5">
     <div class="col-md-7">
-
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>n'</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (data) { %>
+            <% for(let i = 0; i < data.length; i++) { %>
+              <tr>
+                <th><%= i + 1 %></th>
+                <th><%= data[i].name %></th>
+                <th><%= data[i].address %></th>
+                <th><%= data[i].phone %></th>
+              </tr>
+            <% } %>
+          <% } %>
+        </tbody>
+      </table>
     </div>
     <div class="col-md-5">
       <div class="card">
@@ -18,7 +40,7 @@
             <div class="form-group">
               <input type="text" name="phone" placeholder="phone" class="form-control">
             </div>
-            <button type="submit" name="button" class="btn btn-primary">SAVE CUSTOMER</button>
+            <button type="submit" class="btn btn-primary">SAVE CUSTOMER</button>
           </form>
         </div>
       </div>
